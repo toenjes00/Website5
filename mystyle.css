@@ -1,0 +1,72 @@
+/* FONTS *******************************************/
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/Anton-Regular.ttf);
+}
+
+/**************************************************/
+
+body {
+  background-color: white;
+  background-image: linear-gradient(to right, orange, blue);
+  display: flex;
+  justify-content: center;
+}
+
+#container {
+  position: relative;
+  top: 160px;
+  background: none;
+  width: 500px;
+}
+
+h1 {
+  font-family: Anton;
+  color: white;
+  padding: 10px;
+  position: relative;
+  animation-name: movingtext;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+#content-box {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+@keyframes movingtext {
+  from {background-color: blue;}
+  to {background-color: orange;}
+}
+
+#centerColumn {
+  position: relative;
+  top: 30px;
+  width: 400px;
+  margin: 20px;
+  border: 15px solid blue;
+  border-radius: 25px;
+
+}
+
+ul {
+  position: relative;
+  margin-bottom: 13px;
+  list-style-type: none;
+  padding: 20px;
+  display: flex;
+  justify-content: left;
+}
+
+a{
+  text-decoration: none;
+  background: #FFF;
+  padding: 15px;
+}
+
+a:hover{
+  background: orange;
+}

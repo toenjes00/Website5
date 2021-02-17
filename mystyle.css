@@ -5,11 +5,21 @@
   src: url(fonts/Anton-Regular.ttf);
 }
 
+@font-face {
+  font-family: mySecondFont;
+  src: url(fonts/IBM_Plex_Mono/IBMPlexMonoBold.ttf);
+}
+
+@font-face {
+  font-family: myThirdFont;
+  src: url(fonts/Y2K-neophyte-italic.ttf);
+}
+
 /**************************************************/
 
 body {
   background-color: white;
-  background-image: linear-gradient(to right, orange, blue);
+  background-image: linear-gradient(to right,#7b4397,#dc2430);
   display: flex;
   justify-content: center;
 }
@@ -27,14 +37,26 @@ h1 {
   padding: 10px;
   position: relative;
   animation-name: movingtext;
-  animation-duration: 1s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
+  text-align: center;
+}
+
+h2 {
+  font-family: IBM_Plex_Mono;
+  text-align: center;
+}
+
+.p1 {
+  font-family: Y2K-neophyte;
+  text-align: center;
 }
 
 #content-box {
-  background: white;
+  background: light blue;
   padding: 20px;
   margin-bottom: 20px;
+  border-radius: 25px;
 }
 
 @keyframes movingtext {
@@ -58,15 +80,64 @@ ul {
   list-style-type: none;
   padding: 20px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
+
 }
 
 a{
   text-decoration: none;
-  background: #FFF;
-  padding: 15px;
+  background: lightblue;
+  padding: 20px;
+  border-radius: 30px;
+
 }
 
 a:hover{
   background: orange;
+}
+
+#slider {
+	overflow: hidden;
+}
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+}
+
+#slider figure img {
+	width: 20%;
+	float: left;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
 }
